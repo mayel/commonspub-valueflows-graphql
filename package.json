@@ -1,6 +1,5 @@
 {
   "name": "commonspub-valueflows-graphql",
-  "private": true,
   "version": "0.0.1",
   "description": "Extensions to core ValueFlows GraphQL schema for CommonsPub system implementation",
   "main": "CP_VF.gql",
