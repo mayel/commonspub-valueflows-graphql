@@ -1,10 +1,13 @@
 {
   "name": "commonspub-valueflows-graphql",
+  "private": true,
   "version": "0.0.1",
   "description": "Extensions to core ValueFlows GraphQL schema for CommonsPub system implementation",
   "main": "CP_VF.gql",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "node build.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepare": "npm run build"
   },
   "repository": {
     "type": "git",
@@ -22,5 +25,9 @@
   "bugs": {
     "url": "https://github.com/commonspub/commonspub-valueflows-graphql/issues"
   },
-  "homepage": "https://github.com/commonspub/commonspub-valueflows-graphql#readme"
+  "homepage": "https://github.com/commonspub/commonspub-valueflows-graphql#readme",
+  "devDependencies": {
+    "@valueflows/vf-graphql": "^0.7.1",
+    "globby": "^11.0.0"
+  }
 }
