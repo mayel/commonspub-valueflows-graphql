@@ -1,0 +1,26 @@
+{
+  "name": "commonspub-valueflows-graphql",
+  "version": "0.0.1",
+  "description": "Extensions to core ValueFlows GraphQL schema for CommonsPub system implementation",
+  "main": "CP_VF.gql",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/commonspub/commonspub-valueflows-graphql.git"
+  },
+  "keywords": [
+    "ValueFlows",
+    "REA",
+    "GraphQL",
+    "CommonsPub",
+    "ActivityPub"
+  ],
+  "author": "CommonsPub contributors",
+  "license": "AGPL-3.0",
+  "bugs": {
+    "url": "https://github.com/commonspub/commonspub-valueflows-graphql/issues"
+  },
+  "homepage": "https://github.com/commonspub/commonspub-valueflows-graphql#readme"
+}
