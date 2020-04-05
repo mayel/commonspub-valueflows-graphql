@@ -8,20 +8,22 @@
 const path = require('path')
 const fs = require('fs')
 const globby = require('globby')
+const schemas_path = `./schema/extensions/*.gql`
+const schema_final_path = `./schema/commonspub_valueflows.gql`
 
 const { buildSchema, printSchema } = require('@valueflows/vf-graphql')
 
-;(async() => {
-  const extensionSchemas = []
+  ; (async () => {
+    const extensionSchemas = []
 
-  for await (const filePath of globby.stream(path.resolve(__dirname, `./schemas/**/*.gql`))) {
-    const doc = fs.readFileSync(filePath)
-    extensionSchemas.push(doc.toString())
-  }
+    for await (const filePath of globby.stream(path.resolve(__dirname, schemas_path))) {
+      const doc = fs.readFileSync(filePath)
+      extensionSchemas.push(doc.toString())
+    }
 
-  fs.writeFileSync(
-    path.resolve(__dirname, `./CP_VF.gql`),
-    printSchema(buildSchema([
+    console.log(extensionSchemas)
+
+    var schema_merged = buildSchema([
       'knowledge', 'measurement',
       'agent',
       'observation', 'planning', 'recipe',
@@ -29,6 +31,12 @@ const { buildSchema, printSchema } = require('@valueflows/vf-graphql')
       'proposal', 'agreement',
       'plan', 'scenario',
       'appreciation', 'claim',
-    ], extensionSchemas))
-  )
-})()
+    ], extensionSchemas)
+
+    console.log(schema_merged)
+
+    fs.writeFileSync(
+      path.resolve(__dirname, schema_final_path),
+      printSchema(schema_merged)
+    )
+  })()
