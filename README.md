@@ -4,7 +4,9 @@ Implementation-specific extensions to the ValueFlows [core grammar in GraphQL](h
 
 ## Usage
 
-This module can be installed as an NPM module straight from Github using the URI `git+https://git@github.com/commonspub/commonspub-valueflows-graphql.git` in `package.json`. If done using this method, the schema will be generated automatically at installation time.
+This module can be installed as an NPM module straight from Github using the URI `git+https://git@github.com/commonspub/commonspub-valueflows-graphql.git#COMMIT_HASH` in `package.json` (replacing `COMMIT_HASH` with the branch, tag or commit ID to reference).
+
+If done using this method, the schema will be generated automatically at installation time.
 
 ## Developing
 
