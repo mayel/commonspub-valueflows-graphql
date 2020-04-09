@@ -1,5 +1,13 @@
+type SpatialThingsPage{
+  page_info: PageInfo
+  edges: [SpatialThing]
+  totalCount: Int
+}
+
+
 type SpatialThing {
 
   canonicalUrl: String
+  displayUsername: String
 
 }
