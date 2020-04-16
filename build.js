@@ -31,7 +31,10 @@ const { buildSchema, printSchema } = require('@valueflows/vf-graphql')
       'proposal', 'agreement',
       'plan', 'scenario',
       'appreciation', 'claim',
-    ], extensionSchemas)
+    ],
+      extensionSchemas,
+      // { throwOnConflict: true, assumeValidSDL: true }
+    )
 
     console.log(schema_merged)
 
