@@ -1,5 +1,0 @@
-type Group {
-  members: [Agent!]
-}
-
-union AccountingScope = Person | Organization | Group

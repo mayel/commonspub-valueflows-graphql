@@ -1,0 +1,10 @@
+type UnitsPage{
+  page_info: PageInfo
+  edges: [Unit]
+  totalCount: Int
+}
+
+type Query{
+    unitsPages(limit: Int, before: [Cursor], after: [Cursor]): [UnitsPage!]
+}
+

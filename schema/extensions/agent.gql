@@ -1,0 +1,40 @@
+
+# extend the possible context (inScopeOf) from just `Person | Organization` # TODO: add instance
+union AccountingScope = Person | Organization | Community | Collection 
+
+# define possible Agent types
+enum AgentType {
+    Person
+    Organization
+}
+
+# extend Agent types
+interface Agent {
+      "The main place an agent is located, often an address where activities occur and mail can be sent. This is usually a mappable geographic location.  It also could be a website address, as in the case of agents who have no physical location."
+  primaryLocation: SpatialThing
+
+  agentType: AgentType 
+  canonicalUrl: String
+  displayUsername: String
+}
+
+
+type Person {
+      "The main place an agent is located, often an address where activities occur and mail can be sent. This is usually a mappable geographic location.  It also could be a website address, as in the case of agents who have no physical location."
+  primaryLocation: SpatialThing
+
+  agentType: AgentType 
+  canonicalUrl: String
+  displayUsername: String
+}
+
+type Organization {
+      "The main place an agent is located, often an address where activities occur and mail can be sent. This is usually a mappable geographic location.  It also could be a website address, as in the case of agents who have no physical location."
+  primaryLocation: SpatialThing
+
+  agentType: AgentType 
+  canonicalUrl: String
+  displayUsername: String
+
+  inScopeOf: [AccountingScope!]
+}

@@ -1,13 +1,18 @@
+
+type SpatialThing {
+
+  canonicalUrl: String
+  displayUsername: String
+  inScopeOf: [AccountingScope!]
+
+}
+
 type SpatialThingsPage{
   page_info: PageInfo
   edges: [SpatialThing]
   totalCount: Int
 }
 
-
-type SpatialThing {
-
-  canonicalUrl: String
-  displayUsername: String
-
+type Query {
+    spatialThingsPages(limit: Int, before: [Cursor], after: [Cursor]): [SpatialThingsPage!]
 }
