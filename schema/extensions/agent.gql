@@ -1,5 +1,4 @@
-
-# extend the possible context (inScopeOf) from just `Person | Organization` # TODO: add instance
+""" Grouping around something to create a boundary or context, used for documenting, accounting, planning. Extended from the default of `Person | Organization` # TODO: add Instance """
 union AccountingScope = Person | Organization | Community | Collection 
 
 # define possible Agent types

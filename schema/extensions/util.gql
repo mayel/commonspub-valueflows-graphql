@@ -1,11 +1,11 @@
-# only used for workaround mentioned in readme
+""" Only used for workaround mentioned in readme """
 scalar ExternalType
 
-# only included here to help with merging, but should be removed in merged schema as this is already defined in CommonsPub
+""" REMOVEME! only included here to help with merging, but should be removed from the final schema as this is already defined in CommonsPub"""
 type PageInfo {
     workaround: String
 }
-# only included here to help with merging, but should be removed in merged schema as this is already defined in CommonsPub
+""" REMOVEME! only included here to help with merging, but should be removed from the final schema as this is already defined in CommonsPub"""
 type Cursor {
     workaround: String
 }
