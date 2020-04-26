@@ -26,7 +26,10 @@
   },
   "homepage": "https://github.com/commonspub/commonspub-valueflows-graphql#readme",
   "devDependencies": {
-    "@valueflows/vf-graphql": "^0.8.1",
-    "globby": "^11.0.0"
+    "globby": "^11.0.0",
+    "use-yarn": "^2.2.0"
+  },
+  "dependencies": {
+    "@valueflows/vf-graphql": "^0.8.2"
   }
 }
